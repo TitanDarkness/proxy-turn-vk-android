@@ -97,7 +97,7 @@ var serverWrapKeys = newWrapKeyStore()
 const (
 	passChars             = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789"
 	generatedPasswordLen  = 16
-	maxGeneratedPasswords = 10
+	maxGeneratedPasswords = 1000
 )
 
 func generatePassword() string {
