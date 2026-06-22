@@ -115,13 +115,14 @@ func generatePassword() string {
 	}
 	return string(b)
 }
-
-var publicIP string = ""
-
+domain := flag.String
+var serverDomain string
+serverDomain = *domain
 func getPublicIP() string {
-	if publicIP != "" {
-		return publicIP
-	}
+    if serverDomain != "" {
+        return serverDomain
+    }
+
 	client := &http.Client{Timeout: 5 * time.Second}
 	resp, err := client.Get("https://api.ipify.org")
 	if err != nil {
